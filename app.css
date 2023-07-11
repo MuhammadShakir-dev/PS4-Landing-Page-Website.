@@ -1,0 +1,302 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin: 30px 0px;
+}
+
+.menu-icon {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: all 0.4s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff5ea2;
+
+}
+
+nav ul li a::after {
+    content: " ";
+    width: 0px;
+    height: 4px;
+    display: block;
+    background-color: #ff5ea2;
+    transition: all 0.4s ease-in-out;
+}
+
+li a:hover::after {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 120px 0px;
+}
+
+.col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+
+.col-1 h2 {
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.col-1 h3 {
+    font-size: 30px;
+    color: grey;
+    font-weight: 300;
+    margin: 20px 0 10px;
+}
+
+.col-1 p {
+    font-size: 17px;
+    color: #b9b9b9;
+    font-weight: 200;
+}
+
+.col-1 h4 {
+    margin: 30px 0;
+    font-size: 20px;
+}
+
+button {
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: white;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+button img {
+    width: 30px;
+    display: none;
+}
+
+button:hover img {
+    display: block;
+}
+
+button:hover {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: scale(1.1);
+    box-shadow: #fb5283 0px 50px 100px -20px, #ff3527 0px 30px 60px -30px;
+}
+
+.col-1::after {
+    content: " ";
+    width: 10px;
+    height: 57%;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+
+.col-2 {
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center
+}
+
+.col-2 .controller {
+    width: 90%;
+    transition: 0.5s ease-in-out;
+}
+
+.controller:hover {
+    transform: translateX(50px);
+    cursor: pointer;
+}
+
+.color-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    border-radius: 20px 0px 0px 20px;
+    width: 80%;
+    height: 100%;
+    z-index: -1;
+    transform: translateX(150px);
+}
+
+.add-btn img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.add-btn {
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width:700px) {
+    nav ul {
+        width: 100%;
+        background: linear-gradient(#fb5283, #ff3527);
+        ;
+        position: absolute;
+        top: 85px;
+        right: 0;
+        z-index: 2;
+
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 20px 10px 0px
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    .menu-icon {
+        display: block
+    }
+
+    #menuList {
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+
+    nav ul li a:hover {
+        color: white;
+    }
+
+    nav ul li a::after {
+        display: none;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+        margin: 100px 0px;
+
+    }
+
+    .controller:hover {
+        transform: translateX(30px);
+        cursor: pointer;
+    }
+
+    .col-2 {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+
+    .controller {
+        width: 77%;
+    }
+
+    .add-btn p {
+        font-size: 15px;
+    }
+}
